@@ -1,5 +1,8 @@
 const express = require('express');
+const cors = require('cors'); // 1. 引入 cors
 const app = express();
+
+app.use(cors()); // 2. 全局使用 cors 中间件
 app.use(express.json());
 
 // 模拟数据库
